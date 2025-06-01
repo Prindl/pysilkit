@@ -1,0 +1,30 @@
+[build-system]
+requires = [
+    "setuptools >= 77.0",
+    "setuptools_scm",
+    "wheel"
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pysilkit"
+description = "A complete ctypes wrapper around Vector's SilKit."
+readme = "README.rst"
+license-files = ["LICENSE"]
+authors = [{ name = "Maximilian Prindl" }]
+maintainers = [{ name = "Maximilian Prindl" }]
+dependencies = [
+
+]
+dynamic = ["version"]
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["pysilkit*"]
+
+[tool.setuptools_scm]
+version_scheme = "guess-next-dev"
+local_scheme = "node-and-date"
